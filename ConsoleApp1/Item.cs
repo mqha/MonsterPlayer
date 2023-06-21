@@ -10,7 +10,7 @@ namespace ConsoleApp1
     {
         public void ApplyItem(Player player)
         {
-            Console.WriteLine("Chon chi so muon nang cap:");
+            Console.WriteLine("Chọn chỉ số muốn nâng cấp");
             Console.WriteLine("1. Health");
             Console.WriteLine("2. Damage");
             Console.WriteLine("3. Attack Speed");

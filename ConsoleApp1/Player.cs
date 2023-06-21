@@ -17,7 +17,7 @@ namespace ConsoleApp1
 
         public void LevelUp()
         {
-            Console.WriteLine("Level up! Chon chi so ban muon nang cap:");
+            Console.WriteLine("Level up! Chọn chỉ số muốn nâng cấp");
             Console.WriteLine("1. Health");
             Console.WriteLine("2. Damage");
             Console.WriteLine("3. Attack Speed");

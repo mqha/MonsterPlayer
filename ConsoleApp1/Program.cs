@@ -10,8 +10,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
+
             Player player = new Player(1, 100, 10, 1, 0);
-            Monster monster = new Monster(1, 100, 5, 1);
+            Monster monster = new Monster(1, 10, 1, 1);
 
             int monsterKilled = 0;
 
@@ -33,25 +35,25 @@ namespace ConsoleApp1
                     Item item = new Item();
                     item.ApplyItem(player);
 
-                    monster = new Monster(player.Level, 10, 10, 1);
+                    monster = new Monster(1, 10, 10, 1);
                 }
                 else
                 {
                     monster.Attack(player);
                     if(player.Health <= 0)
                     {
-                        Console.WriteLine("Ban da chet");
+                        Console.WriteLine("Bạn đã tử vong");
                     }
                     else
                     {
-                        Console.WriteLine("Mau cua ban con: " + player.Health);
+                        Console.WriteLine("Máu của bạn còn: " + player.Health);
                     }
                 }
             }
 
             Console.WriteLine("Game Over");
-            Console.WriteLine("Quai vat da bi giet: " +  monsterKilled);
-            Console.WriteLine("Level cua ban: " + player.Level);
+            Console.WriteLine("Số quái vật đã bị giết" +  monsterKilled);
+            Console.WriteLine("Level của bạn" + player.Level);
         }
     }
 }

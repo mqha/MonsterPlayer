@@ -23,15 +23,15 @@ namespace ConsoleApp1
 
         public void Attack(Human target)
         {
-            Console.WriteLine("Tan Cong ... ");
+            Console.WriteLine("Tấn công!");
             target.Health -= Damage;
             if (target.Health <= 0) 
             {
-                Console.WriteLine("Tieu diet muc tieu");
+                Console.WriteLine("Mục tiêu đã bị tiêu diệt");
             }
             else
             {
-                Console.WriteLine("Mau quai vat con lai: "+ target.Health);
+                Console.WriteLine("Máu quái vật còn lại: "+ target.Health);
             }
         }
     }
