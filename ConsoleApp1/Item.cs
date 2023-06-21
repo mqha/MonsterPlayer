@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Player : Human
+    public class Item
     {
-        public int Exp {get;set;}
-
-        public Player(int level, int health, int damage, int attackSpeed, int exp) : base (level,health,damage,attackSpeed)
+        public void ApplyItem(Player player)
         {
-            Exp = exp;
-        }
-
-        public void LevelUp()
-        {
-            Console.WriteLine("Level up! Chon chi so ban muon nang cap:");
+            Console.WriteLine("Chon chi so muon nang cap:");
             Console.WriteLine("1. Health");
             Console.WriteLine("2. Damage");
             Console.WriteLine("3. Attack Speed");
@@ -27,15 +20,14 @@ namespace ConsoleApp1
             switch (choice)
             {
                 case 1:
-                    Health += (int)(Health * 0.3);
+                    player.Health += (int)(player.Health * 0.05);
                     break;
                 case 2:
-                    Damage += (int)(Damage * 0.3);
+                    player.Damage += (int)(player.Damage * 0.05);
                     break;
                 case 3:
-                    AttackSpeed += (int)(AttackSpeed * 0.3);
+                    player.AttackSpeed += (int)(player.AttackSpeed * 0.05);
                     break;
-
             }
         }
     }

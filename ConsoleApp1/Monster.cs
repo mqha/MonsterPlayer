@@ -8,10 +8,9 @@ namespace ConsoleApp1
 {
     public class Monster : Human
     {
-        public Monster() : base()
+        public Monster(int level, int health, int damage, int attackSpeed) : base(level, health, damage, attackSpeed)
         {
-            Damage = 10;
-        }
 
+        }
     }
 }

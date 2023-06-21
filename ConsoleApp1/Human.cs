@@ -8,22 +8,31 @@ namespace ConsoleApp1
 {
     public class Human
     {
-        private int level;
-        private int health;
-        private int damage;
-        private int atkSpeed;
-        private int exp;
+        public int Level { get; set; }
+        public int Health { get; set; }
+        public int Damage { get; set; }
+        public int AttackSpeed { get; set; }
 
-        public int Level => level;
-        public int Health => health;
-        public int Damage => damage;
-        public int AttackSpeed => atkSpeed;
-        public int Exp => exp;
+        public Human(int level, int health, int damage, int attackSpeed) 
+        { 
+            Level = level;
+            Health = health;
+            Damage = damage;
+            AttackSpeed = attackSpeed;
+        }
 
-
-        public Human()
+        public void Attack(Human target)
         {
-            this.level = 1;
+            Console.WriteLine("Tan Cong ... ");
+            target.Health -= Damage;
+            if (target.Health <= 0) 
+            {
+                Console.WriteLine("Tieu diet muc tieu");
+            }
+            else
+            {
+                Console.WriteLine("Mau quai vat con lai: "+ target.Health);
+            }
         }
     }
 }
